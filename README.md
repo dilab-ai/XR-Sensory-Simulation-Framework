@@ -21,6 +21,12 @@ Unity receives the WebRTC audio track and applies dynamic filters (Lowpass, Echo
 
 ---
 
+## 📺 Demo Video
+
+Check out the system in action, demonstrating the real-time synchronization between the Web Dashboard and the Quest 3 Audio Mixer:
+
+https://github.com/dilab-ai/XR-Sensory-Simulation-Framework/blob/main/NeuroAudio_Demo.mp4
+
 ## 📌 Overview  
 The XR Sensory Simulation Framework is built to help manage sensory overload by allowing real-time control over environmental audio. Unlike static solutions, this system provides **live, adjustable audio modulation** while preserving situational awareness through passthrough XR.
 
