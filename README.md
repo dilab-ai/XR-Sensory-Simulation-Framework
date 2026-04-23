@@ -5,6 +5,22 @@ A distributed Extended Reality (XR) system for real-time auditory regulation usi
 
 ---
 
+## 📸 Visual Documentation
+
+### Facilitator Dashboard (NeuroControl)
+The web interface allows real-time manipulation of the auditory environment using WebRTC. This dashboard sends control signals directly to the Unity environment via Firebase.
+![Dashboard](NeuroControl_web.png)
+
+### Firebase Real-Time Synchronization
+Data is synchronized across the Web, Firebase, and Unity pipelines with sub-100ms latency. This ensures that environmental changes are felt by the VR user instantly.
+![Firebase](Firebase.png)
+
+### Unity Signal Processing
+Unity receives the WebRTC audio track and applies dynamic filters (Lowpass, Echo, Distortion) based on the data received from the dashboard. The console log confirms a successful "Incoming Audio Track Found!" handshake.
+![Unity Console and Mixer](unity.png)
+
+---
+
 ## 📌 Overview  
 The XR Sensory Simulation Framework is built to help manage sensory overload by allowing real-time control over environmental audio. Unlike static solutions, this system provides **live, adjustable audio modulation** while preserving situational awareness through passthrough XR.
 
@@ -14,22 +30,17 @@ The system uses a **distributed architecture**, offloading processing across a P
 
 ## 🚀 Features  
 
-- 🎧 **Live WebRTC Audio Streaming**  
-  Stream real-time audio from a web dashboard to Meta Quest 3  
+- 🎧 **Live WebRTC Audio Streaming** Stream real-time audio from a web dashboard to Meta Quest 3  
 
-- 🎚️ **Dynamic Audio Filters**  
-  - Low-pass filtering (Muffle control)  
+- 🎚️ **Dynamic Audio Filters** - Low-pass filtering (Muffle control)  
   - Echo / delay modulation  
   - Real-time parameter tuning  
 
-- 🌐 **Firebase-Based Signaling**  
-  Enables peer-to-peer communication and synchronization  
+- 🌐 **Firebase-Based Signaling** Enables peer-to-peer communication and synchronization  
 
-- ⚡ **Low Latency System**  
-  Sub-100 ms response time for real-time control  
+- ⚡ **Low Latency System** Sub-100 ms response time for real-time control  
 
-- 👁️ **Passthrough Integration**  
-  Maintains real-world awareness while applying audio effects  
+- 👁️ **Passthrough Integration** Maintains real-world awareness while applying audio effects  
 
 ---
 
@@ -69,14 +80,11 @@ The framework follows a **three-layer distributed model**:
 
 The system uses a **real-time DSP pipeline** inside Unity:
 
-- **Lowpass Filter (`LowpassFreq`)**  
-  Reduces high-frequency noise to simulate “muffle”  
+- **Lowpass Filter (`LowpassFreq`)** Reduces high-frequency noise to simulate “muffle”  
 
-- **Echo / Delay (`EchoLevel`)**  
-  Adds spatial softness to audio signals  
+- **Echo / Delay (`EchoLevel`)** Adds spatial softness to audio signals  
 
-- **Dynamic Parameter Control**  
-  Updated via Firebase in real time  
+- **Dynamic Parameter Control** Updated via Firebase in real time  
 
 ---
 
@@ -115,20 +123,17 @@ Audio begins streaming to the XR device.
 ### 4. Adjust Audio Effects  
 Use the web dashboard sliders.  
 Updates are written to:  
-sessions/0000/effects/  
+`sessions/0000/effects/`  
 
 ---
 
 ## ⚠️ Important Notes  
 
-- 🎧 **Use Headphones (Required)**  
-  Prevents audio feedback loops during streaming  
+- 🎧 **Use Headphones (Required)** Prevents audio feedback loops during streaming  
 
-- 🎤 **Microphone Permissions**  
-  Must be enabled in Android Manifest for Quest  
+- 🎤 **Microphone Permissions** Must be enabled in Android Manifest for Quest  
 
-- 🌐 **Network Requirement**  
-  Both devices must be on the same local network  
+- 🌐 **Network Requirement** Both devices must be on the same local network  
 
 ---
 
@@ -139,15 +144,6 @@ This system is designed to support:
 - Neurodivergent workplace accessibility  
 - Sensory regulation in dynamic environments  
 - Real-time adaptive audio experiences  
-
----
-
-## 🔮 Future Improvements  
-
-- 🤖 AI-based automatic noise detection and filtering  
-- 📱 Mobile control interface  
-- 🧪 User testing with neurodivergent participants  
-- 🌍 Multi-user / collaborative environments  
 
 ---
 
@@ -166,6 +162,5 @@ This project is licensed under the MIT License.
 
 ## 👩‍💻 Author  
 
-**Srijana Shrestha**  
-Algoma University  
-📧 srshrestha@algomau.ca  
+**Srijana Shrestha** Algoma University  
+📧 srshrestha@algomau.ca
